@@ -9,4 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
-playground-series-s5e10
+playground-series-s5e10/test.csv
+playground-series-s5e10/sample_submission.csv
+
