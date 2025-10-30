@@ -102,7 +102,8 @@ def main():
                 max_value=1.0,
                 value=st.session_state.user_prediction,
                 step=0.01,
-                key="prediction_slider"
+                key="prediction_slider",
+                disabled=st.session_state.revealed,
             )
             st.session_state.user_prediction = user_pred
         
@@ -161,7 +162,6 @@ def main():
             
             st.bar_chart(comparison_df.set_index('Prediction Type')['Value'])
 
-            # Add SHAP waterfall plot
             st.subheader("🔍 AI Model Explanation")
             if st.button("📊 Show SHAP Waterfall Plot"):
                 with st.spinner("Generating SHAP explanation..."):
